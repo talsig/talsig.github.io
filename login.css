@@ -1,0 +1,133 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-color: #3586ff;
+    background-size: cover;
+    font-family: Calibri;
+}
+
+.loginbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 620px;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.75);
+    border-radius: 7%;
+}
+.loginbox2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 720px;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.7);
+    border-radius: 7%;
+}
+
+.user {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    top: calc(-150px/2);
+    left: calc(50% - 75px);
+    position: absolute;
+    border-radius: 50%;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: red;
+    font-size: 33px;
+}
+
+.lblmass {
+    color: #fff;
+}
+
+.lblUser, .lblPass {
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+}
+
+.txtUser, .txtPass, .btnSubmit {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.btnSubmit {
+    margin-top: 40px;
+}
+
+.txtUser, .txtPass {
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+::placeholder {
+    color: rgba(255,255,255,.5 );
+}
+
+.btnSubmit {
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    background-color: red;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+    .btnSubmit:hover {
+        background-color: #3586ff;
+        height: 50px;
+        text-align: center;
+    }
+
+.txtUser:hover, .txtPass:hover{
+    border-radius: 20%;
+    border-color: #2ecc71;
+    border-width: 5px;
+    text-decoration-color: black;
+}
+.forgotPass{
+    text-decoration: none;
+    text-align: center;
+    margin-right: 120px;
+    color:grey;
+}
+.privacyandpolicy {
+    text-decoration: none;
+    text-align: center;
+    margin-right: 120px;
+    color: lightgrey;
+}
+.privacyandpolicy a{
+    text-align: center;
+}
+.content {
+    pointer-events: none;
+}
+.content a{
+    content:url();
+}
+a {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}

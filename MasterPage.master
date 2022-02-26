@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html lang="he" dir="rtl">
+<head runat="server">
+	<meta charset="utf-8" />
+	<title></title>
+	<link href="Styles/MySiteStyle.css" rel="stylesheet" />
+	<asp:ContentPlaceHolder id="head" runat="server" />
+</head>
+<body runat="server" id="elBody">
+	<section>
+		<div class="wave wave1"></div>
+		<div class="wave wave2"></div>
+		<div class="wave wave3"></div>
+		<div class="wave wave4"></div>
+			<form id="form1" runat="server">
+		<asp:LinkButton Text="חדות רגילה" runat="server" OnClick="BtnNormContrast_Click" Visible="false"/>
+		<asp:LinkButton Text="חדות גבוהה" runat="server" OnClick="BtnHighContrast_Click" Visible="false" />
+				<br />
+		<h1 class="bigtitle">
+			<span>
+				<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+				<img src="images/reallogo.png" height="30" width="40"/>
+				</a>
+			</span>
+			טריוויה בפאן
+		</h1>
+			<input type="checkbox" id="showNav" />
+	<nav>
+		<label for="showNav">|||</label>
+		<a href="#mainContent">דלג אל התוכן</a>
+			<ul>
+				<li> <a href="." class="neon-button"> לדף הראשי</a></li>
+				<li> 
+					<asp:HyperLink ID="linklogin" runat="server" Visible="true" class="neon-button" Text="כניסת משתמשים" NavigateUrl="~/newlogin.aspx" />
+					<asp:Label ID="lblHello" runat="server" CssClass="masterlabels" />
+					<asp:LinkButton ID="linkLogout" Text="התנתק" Visible="false" CssClass="neon-button" runat="server" OnClick="linkLogout_Click" />
+				</li>
+				<li><asp:LinkButton ID="linkJoin" Text="להצטרפות והרשמה" Visible="true" CssClass="neon-button" runat="server" OnClick="linkJoin_Click" />
+					<asp:Label ID="lbljoined" Text="את\ה כבר מחובר, גלישה נעימה!" Visible="false" runat="server" CssClass="masterlabels" />
+				</li>
+				<li><asp:LinkButton ID="linkquestion" Text="לכל החידות ולפרסום" Visible ="true" class="neon-button" runat="server" OnClick="linkquestion_Click" />
+				</li>
+				<li>
+					<asp:LinkButton ID="linkreadyquestions" Text="לחידות מוכנות לחץ כאן" Visible="true" CssClass="neon-button" runat="server" OnClick="linkreadyquestions_Click" />
+					<asp:Label ID="lbltoreadyriddles" runat="server" Text="רוצה לראות את החידות המוכנות? התחבר" Visible="false" CssClass="masterlabels" /> 
+				</li>
+			</ul>
+		</nav>
+		<h2><%: Page.Title %></h2>
+	<div>
+		<asp:ContentPlaceHolder id="mainContent" runat="server" />
+	</div>
+	</form>
+	</section>
+
+</body>
+</html>
